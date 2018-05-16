@@ -18,29 +18,12 @@
     </head>
     <body>
         <div class="container">
-            <h1>Listagem de Produtos.</h1>
-            <table class="table table-striped table-bordered table-hover">
-                <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Quantidade</th>
-                    <th scope="col">Ação</th>
-                </tr>
-                <?php foreach ($produtos as $p) : ?>
-                <tr>
-                    <td scope="row"><?=$p->nome?></td>
-                    <td><?=$p->valor?></td>
-                    <td><?=$p->descricao?></td>
-                    <td><?=$p->quantidade?></td>
-                    <td>
-                        <a href="/produtos/mostra?id=<?=$p->id?>">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </a>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </table>
+            <h1>Detalhes do Produto <?=$p->nome?>.</h1>
+            <ul>
+                <li><b>Valor:</b> R$ <?=$p->valor?></li>
+                <li><b>Descrição:</b> R$ <?=$p->descricao?></li>
+                <li><b>Quantidade em estoque:</b> R$ <?=$p->quantidade?></li>
+            </ul>
         </div>
 
 
