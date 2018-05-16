@@ -18,7 +18,7 @@ class ProdutoController
     }
 
     public function mostra() {
-        $id = Request::input('id', '0');
+        $id = Request::route('id', '0');
         $resposta = DB::select("select * from produtos where id = ?",[$id]);
         if (empty($resposta)) {
             return "<h1>Este produto não existe</h1>";
